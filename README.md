@@ -29,9 +29,9 @@ generic identifier class with types and optional versions
 ## Interface
 
     ScopedId : {
-      _id: ObjectId,
+      _id: [ObjectId](https://npmjs.org/package/objectid),
       scope: String,
-      versionId : ObjectId (optional)
+      versionId : [ObjectId](https://npmjs.org/package/objectid) (optional)
     }
 
 ## String format
