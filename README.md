@@ -40,15 +40,15 @@ generic identifier class with types and optional versions
 
 ## Static Methods
 
-ScopedId.equals(sidA, sidB) => Boolean
-ScopedId.isValid(sid) => Boolean
-ScopedId.tryParse(sid, out, as) => Boolean
+### ScopedId.equals(sidA, sidB) => Boolean
+### ScopedId.isValid(sid) => Boolean
+### ScopedId.tryParse(sid, out, as) => Boolean
 
 ## Instance Methods
 
-ScopedId#equals(sidB) => Boolean
-ScopedId#toString() => String
-ScopedId#toJSON() => String
+### ScopedId#equals(sidB) => Boolean
+### ScopedId#toString() => String
+### ScopedId#toJSON() => String
 
 ## running the tests
 
