@@ -1,0 +1,35 @@
+{
+  "name": "scopedid",
+  "version": "0.1.0",
+  "description": "generic identifier class with types and optional versions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AgileDiagnosis/scopedid.git"
+  },
+  "keywords": [
+    "identifier",
+    "class",
+    "type",
+    "version",
+    "mongodb",
+    "objectid"
+  ],
+  "author": "Agile Diagnosis <team@agilediagnosis.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "chai": "~1.5.0",
+    "chai-interface": "~1.1.0",
+    "mocha": "~1.8.2"
+  },
+  "dependencies": {
+    "objectid": "~2.1.0"
+  }
+}
