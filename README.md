@@ -34,21 +34,23 @@ generic identifier class with types and optional versions
       versionId : ObjectId (optional)
     }
 
+See [ObjectId](https://npmjs.org/package/objectid)
+
 ## String format
 
 `{scope}/{_id}` or `{scope}/{_id}/{versionId}`
 
 ## Static Methods
 
-ScopedId.equals(sidA, sidB) => Boolean
-ScopedId.isValid(sid) => Boolean
-ScopedId.tryParse(sid, out, as) => Boolean
+### ScopedId.equals(sidA, sidB) => Boolean
+### ScopedId.isValid(sid) => Boolean
+### ScopedId.tryParse(sid, out, as) => Boolean
 
 ## Instance Methods
 
-ScopedId#equals(sidB) => Boolean
-ScopedId#toString() => String
-ScopedId#toJSON() => String
+### ScopedId#equals(sidB) => Boolean
+### ScopedId#toString() => String
+### ScopedId#toJSON() => String
 
 ## running the tests
 
