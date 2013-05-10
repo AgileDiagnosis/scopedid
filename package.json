@@ -1,6 +1,6 @@
 {
   "name": "scopedid",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "generic identifier class with types and optional versions",
   "main": "index.js",
   "directories": {
@@ -30,6 +30,6 @@
     "mocha": "~1.8.2"
   },
   "dependencies": {
-    "objectid": "~3.0.0"
+    "objectid": "~3.0.1"
   }
 }
