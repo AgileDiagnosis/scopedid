@@ -1,6 +1,6 @@
 {
   "name": "scopedid",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "generic identifier class with types and optional versions",
   "main": "index.js",
   "directories": {

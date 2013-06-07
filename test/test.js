@@ -35,6 +35,9 @@ describe('ScopedId', function () {
     // versioned instance
     var versionedScopeId = ScopedId('foo', oid, oid)
     versionedScopeId.versionId.should.be.an('object')
+
+    var versionedScopeId = ScopedId('foo', oid, 'ref')
+    versionedScopeId.versionId.should.equal('ref')
   })
 
   it('throws if scope is empty or not a string', function () {
@@ -79,6 +82,11 @@ describe('ScopedId', function () {
       ScopedId.equals(
         ScopedId('bar', oid),
         ScopedId('bar', oid)
+      ).should.equal(true)
+
+      ScopedId.equals(
+        ScopedId('bar', oid, 'ref'),
+        ScopedId('bar', oid, 'ref')
       ).should.equal(true)
 
       ScopedId.equals(
@@ -189,6 +197,9 @@ describe('ScopedId', function () {
         _id: ObjectId(),
         versionId: ObjectId()
       }).should.equal(true)
+    })
+    it('returns true with string version ref', function () {
+      ScopedId.isValid('blah/'+oid+'/ref').should.equal(true)
     })
     it('returns false otherwise', function () {
       ScopedId.isValid('foo').should.equal(false)

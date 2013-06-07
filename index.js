@@ -19,7 +19,11 @@ function ScopedId(scope, id, versionId) {
   }
   this.scope = scope
   this._id = ObjectId(id)
-  this.versionId = versionId ? ObjectId(versionId) : null
+  this.versionId = versionId
+                  ? ObjectId.isValid(versionId)
+                    ? ObjectId(versionId)
+                    : versionId
+                  : null
 }
 ScopedId.prototype.toString = function () {
   var id = this.scope + '/' + this._id.toString();
@@ -32,7 +36,7 @@ ScopedId.prototype.equals = function (sidB) {
   return ScopedId.equals(this, sidB);
 }
 
-var scopedIdTest = /^[a-zA-Z]+(\/[0-9a-fA-F]{24}){1,2}$/;
+var scopedIdTest = /^[a-zA-Z]+(\/[0-9a-fA-F]{24})(\/([0-9a-fA-F]{24}|[a-zA-Z0-9_]+))?$/;
 
 ScopedId.parse = function (sid) {
   if (sid instanceof ScopedId) {

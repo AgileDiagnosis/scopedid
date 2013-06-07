@@ -31,8 +31,11 @@ generic identifier class with types and optional versions
     ScopedId : {
       _id: ObjectId,
       scope: String,
-      versionId : ObjectId (optional)
+      versionId : ObjectId|String (optional)
     }
+
+`versionId` can be an ObjectId or a string representing
+a version ref (like a branch).
 
 See [ObjectId](https://npmjs.org/package/objectid)
 
